@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "logout-tracker",
+  "version": "1.0.0",
+  "name": "Logout Tracker",
+  "description": "Persistently tracks player logout spots for admins.",
+  "license": "MIT",
+  "icon": "assets/logout-tracker/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.mayukh.logouttracker.LogoutTrackerMod"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.10",
+    "java": ">=21"
+  }
+}
