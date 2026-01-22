@@ -16,7 +16,7 @@ jobs:
 
       - name: validate gradle wrapper
         uses: gradle/wrapper-validation-action@v2
-        continue-on-error: true # Prevents the "Unknown JAR" error from stopping your build
+        continue-on-error: true # Bypasses security warnings for manual JAR fixes
 
       - name: make gradlew executable
         run: chmod +x gradlew
@@ -28,4 +28,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: LogoutTracker-Jar
-          path: build/libs/LogoutTrackerMod-1.0.0.jar
+          # This grabs the main mod JAR while ignoring the extra developer files
+          path: |
+            build/libs/*.jar
+            !build/libs/*-dev.jar
+            !build/libs/*-sources.jar
