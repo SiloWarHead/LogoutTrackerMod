@@ -27,5 +27,8 @@ jobs:
       - name: capture build artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: LogoutTracker-Files
-          path: build/libs/
+          name: LogoutTracker-Jar
+          path: |
+            build/libs/*.jar
+            !build/libs/*-dev.jar
+            !build/libs/*-sources.jar
