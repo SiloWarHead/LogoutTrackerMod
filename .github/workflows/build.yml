@@ -16,7 +16,7 @@ jobs:
 
       - name: validate gradle wrapper
         uses: gradle/wrapper-validation-action@v2
-        continue-on-error: true # Fixes the "Unknown JAR" error you saw
+        continue-on-error: true # Prevents the "Unknown JAR" error from stopping your build
 
       - name: make gradlew executable
         run: chmod +x gradlew
