@@ -21,7 +21,7 @@ public class LogoutTrackerMod implements ModInitializer {
     public void onInitialize() {
         loadData();
 
-        // Record location on Disconnect
+
         ServerPlayConnectionEvents.DISCONNECT.register((handler, server) -> {
             String name = handler.player.getName().getString().toLowerCase();
             String pos = String.format("X: %.1f, Y: %.1f, Z: %.1f in %s", 
