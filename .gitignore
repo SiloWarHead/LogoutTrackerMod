@@ -1,0 +1,29 @@
+# Gradle temporary files
+.gradle/
+build/
+
+# Fabric / Loom local files
+run/
+.gradle/loom-cache/
+userdev/
+
+# IDE settings
+.idea/
+*.iml
+*.ipr
+*.iws
+.project
+.settings/
+.classpath
+.vscode/
+
+# Log files and crash reports
+logs/
+crash-reports/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Personal Configs (where your logout data is stored during testing)
+config/logout_coords.json
